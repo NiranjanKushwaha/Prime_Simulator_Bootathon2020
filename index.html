@@ -48,8 +48,8 @@
 						<div id="make_visible" style="display:none;">
 							<label class="text-center" id="lblinput" style="color:#2f71b2;padding-left:28px;">Enter a
 								positive Integer</label></br><br>
-							<input class="form-control" type="number" id="getdata"
-								style="margin-left:25px;width:80%;" />
+						   <input type="number" onkeydown="if(event.key==='.'){event.preventDefault();}"  oninput="event.target.value = event.target.value.replace(/[^0-9]*/g,'');" id="getdata"
+						   style="margin-left:25px;width:80%;">
 							<br>
 							<button class="form-control btn btn-primary" id="checkManuallybtn" onclick="Prime()"
 								style="margin-left:25px;width:80%; font-weight:bold;">Check Manually</button>
